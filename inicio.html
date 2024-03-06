@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAIRA ESCAMILLA</title>
+    <meta name="description" content="Página web de Smokeshop Area 52">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    
+    <!-- Preload -->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"  crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon"/>
+
+    <!-- Logo -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+<body style="background-color: #ff8fa3;">
+
+<style>
+    .hero {
+    background-color: #ff8fa3;
+    background-size: cover;
+    background-position: center;
+    }
+
+    /* Estilo inicial de la tarjeta */
+    .card {
+        transition: transform 0.3s ease;
+    }
+    /* Estilo al pasar el cursor sobre la tarjeta */
+    .card:hover {
+        transform: scale(1.05);
+    }
+    /* Estilo inicial del botón */
+    .btn {
+        transition: transform 0.3s ease;
+    }
+    /* Estilo al pasar el cursor sobre el botón */
+    .btn:hover {
+        transform: scale(1.05);
+    }
+    body {
+      cursor: help;
+    }
+    .efecto {
+        transition: transform 0.3s ease;
+    }
+    /* Estilo al pasar el cursor sobre la tarjeta */
+    .efecto:hover {
+        transform: scale(1.05);
+    }
+
+    .content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    .text-container {
+    flex: 1;
+    padding: 20px;
+    }
+
+    .image-container {
+    flex: 1;
+    border-radius: 20px 20px;
+    overflow: hidden;
+    }
+
+    .image-container img {
+    width: 100%;
+    border-radius: 10px 0px 0px 10px;
+    }
+
+    .iphone-container {
+  display: flex;
+  justify-content: space-between;
+    }
+
+    .iphone {
+    width: 30%; /* Ajusta el ancho de cada iPhone */
+    height: 550px; /* Ajusta la altura de cada iPhone */
+    background-image: url('iphone_frame.png'); /* Imagen del marco del iPhone */
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    }
+
+    .video {
+    width: 100%;
+    height: calc(100% - 30px); /* Resta el espacio del marco del iPhone */
+    position: relative;
+    overflow: hidden;
+    }
+
+    .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+
+    .flag {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    }
+</style>
+
+<!--MENÚ-->
+<nav class="navbar navbar-expand-md navbar-dark fw-bold" style="background: linear-gradient(to bottom, #c9184a, #ff8fa3); padding: 10px;">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+        <img class="d-block mx-auto mb-4" src="./img/logo_zai_inicio.png" alt="" width="200" height="120">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+            <ul class="navbar-nav mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link fs-5 active" style="color: #FFF;" aria-current="page" href="./inicio.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5" style="color: #fff;" href="#contacto">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5" style="color: #fff;" href="#ver_contenido">Colaboraciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5" style="color: #fff;" href="#contenidox">Contenido</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Nuevo contenedor para el botón de WhatsApp -->
+        
+    </div>
+</nav>
+<!--FIN MENÚ-->
+
+<!--HERO-->
+<div class="px-5 py-5 text-center hero" style="color: #ecf39e;">
+    <div class="hero-container" style="background-image: url('./img/zai_billar.jpg'); background-size: cover; background-position: center; height: 100vh;">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-lg-6">
+                <figcaption class="blockquote-footer lead mb-5 mt-5" style="color: #fdfefe; font-size: large; font-style: italic;"></figcaption>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <a href="https://www.instagram.com/zaira_escamilla/" target="_blank" class="btn btn-outline-light btn-lg px-4" style="border-radius: 25px;"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.tiktok.com/@zai_escamilla" target="_blank" class="btn btn-outline-light btn-lg px-4" style="border-radius: 25px;"><i class="fab fa-tiktok"></i> TikTok</a>
+                    <a href="mailto:zaira.escamillab@gmail.com" class="btn btn-outline-light btn-lg px-4" style="border-radius: 25px;"><i class="fas fa-envelope"></i> zaira.escamillab@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--FIN HERO-->
+<hr class="container " style="border: 5px solid white;">
+<!--HEADER-->
+<header class="p-5" style="background-color: #ffb3c1; padding: 25px;">
+    <span id="contacto" class="display-1 fw-bold text-center" style="color:  #fff;">Hola, soy Zai!🤍</span>
+</header>
+<!--FIN HEADER-->
+
+<section style="background: linear-gradient(to bottom, #ff8fa3, #ffb3c1, #ffb3c1); padding: 100px;" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="text-container">
+                    <h2 class="text-center" style="color: #fff;">Creadora de contenido en Tik Tok e Instagram tengo 18 años, estudiante de administración de empresas del entretenimiento, soy muy expresiva, carismática y siempre doy lo mejor de mí. Me gusta transmitir emociones con todo el mundo y compartir mis experiencias.</h2>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-success btn-lg rounded-5 mt-5" style="background: linear-gradient(to bottom, #075e54, #128C7E);" type="button">WhatsApp</button> <!--falto poner a href  https://wa.link/osoqnn-->
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-danger btn-lg rounded-5 mt-5" style="background: linear-gradient(to bottom, #833ab4, #fd1d1d, #fcb045);" type="button">Instagram</button>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-dark btn-lg rounded-5 mt-5" type="button">Tik tok</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image-container">
+                    <img src="./img/zai_x.jpg" alt="Descripción de la imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="container " style="border: 5px solid white;">
+
+<!--HEADER-->
+<header class="pb-3" style="background: linear-gradient(to right, #c9184a, #ff8fa3, #ff8fa3); padding: 25px;" name="ver_contenido" id="ver_contenido">
+  <span class="display-1 fw-bold" style="color:  #fff ;">Colaboraciones</span>
+</header>
+<!--FIN HEADER-->
+
+<div class="iphone-container p-5" style=" background: linear-gradient(to right, #c9184a, #ff8fa3, #ff8fa3);">
+    <div class="iphone">
+        <div class="video">
+            <!-- Aquí va tu primer video -->
+            <iframe width="100%" height="100%" src="./video/chimo.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="flag" style="color: #fff;">
+            Chimo
+        </div>
+    </div>
+    <div class="iphone">
+        <div class="video">
+            <!-- Aquí va tu segundo video -->
+            <iframe width="100%" height="100%" src="./video/ponds.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="flag" style="color: #fff;">
+            Pond´s
+        </div>
+    </div>
+    <div class="iphone">
+        <div class="video">
+            <!-- Aquí va tu tercer video -->
+            <iframe width="100%" height="100%" src="./video/grwm.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="flag" style="color: #fff;">
+            GRWM
+        </div>
+    </div>
+</div>
+
+<hr class="container " style="border: 5px solid white;">
+
+<!--HEADER-->
+<header class="pb-3" style="background-color: #ff8fa3; padding: 25px;" id="contenidox">
+    <span class="display-1 fw-bold" style="color:  #fff ;" id="contenidox"></span>
+  </header>
+  <!--FIN HEADER-->
+
+<section class="p-3" style="background-color: #ff8fa3;">
+<b><div style="text-align: center; color: #fff; font-size: 48px;">Hagamos crecer tu negocio junt@s</div></b>
+<div style="text-align: center; color: #fff; font-size: 24px;">
+    <ul style="padding-left: 0; list-style: none;">
+        <li>Propuesta de contenido</li>
+        <li>Creación + unboxing</li>
+        <li>Tus productos - servicios en tendencia</li>
+        <li>Entrega de contenido 3-5 días hábiles</li>
+    </ul>
+</div>
+</section>
+
+<section class="p-5" style="text-align: center; color: #fff; font-size: 24px;" class="mb-3">
+    <b><div style="text-align: center; color: #fff; font-size: 48px;">Paquetes</div></b>
+
+    <!-- Primera sección -->
+    <div style="display: inline-block; margin-right: 20px;">Menciones</div>
+    <div style="display: inline-block; margin-right: 20px;">Videos</div>
+    <div style="display: inline-block;">Marca</div>
+
+    <!-- Segunda sección -->
+    <div style="text-align: center; color: #fff; margin-top: 20px;">2-3 historias en Instagram.</div>
+    <div style="text-align: center; color: #fff;">Video 15-30 segundos en TikTok explicando y recomendando tu tienda y/o producto.</div>
+    <div style="text-align: center; color: #fff;">Video 15-30 segundos en TikTok y reel en Instagram + historia en Instagram</div>
+</section>
+
+ <!-- Footer -->
+ <footer style="background: linear-gradient(to top, #c9184a, #ff8fa3); color: white; padding: 30px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>©2024 Zaira Escamilla</p>
+            </div>
+            <div class="col-md-6">
+                <p>Con tecnología de <b>CodeCanvas</b></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><a class="text-white" href="./inicio.html">Inicio</a></li>
+                    <li class="mb-2"><a class="text-white" href="#contacto">Contacto</a></li>
+                    <li class="mb-2"><a class="text-white" href="#ver_contenido">Colaboraciones</a></li>
+                    <li><a class="text-white" href="#contenidox">Contenido</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Fin Footer -->
+
+<!-- SECCION DE SCRIPTS -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('a[href^="#"]');
+    
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+    
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+    
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    });
+    
+    function scrollToContent() {
+        // Obtenemos el elemento al que queremos desplazarnos
+        var header = document.getElementById('ver_contenido');
+        
+        // Realizamos el desplazamiento suave
+        header.scrollIntoView({ behavior: 'smooth' });
+    }
+    </script>
+</body>
+</html>
