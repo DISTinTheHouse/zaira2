@@ -46,10 +46,59 @@
             height: 100%;
             object-fit: cover; /* Ajusta el tamaño del video */
         }
+
+        .banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to bottom, #c9184a, #c9184a);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .banner-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 15s linear infinite;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .banner button {
+            background: #fff;
+            color: #ff0000;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 20px;
+        }
     </style>
 
+    <!-- Banner -->
+    <div class="banner" id="banner">
+        <div class="banner-content">
+            Este sitio web fue creado con tecnologia de CodeCanvas. Contactanos para cotizar tu sitio personal o de negocios.
+        </div>
+        <button onclick="document.getElementById('banner').style.display='none'">Cerrar</button>
+    </div>
+
 <!--MENÚ-->
-<nav class="navbar navbar-expand-lg navbar-dark fw-bold" style="background: linear-gradient(to bottom, #c9184a, #ff8fa3); padding: 10px;">
+<nav class="navbar navbar-expand-lg navbar-dark fw-bold" style="background: linear-gradient(to bottom, #c9184a, #ff8fa3); padding: 10px; margin-top: 50px;">
     <div class="container-fluid d-flex align-items-center justify-content-between">
         <img class="d-block mx-auto mb-4" src="./img/logo_zai_inicio.png" alt="" width="200" height="120">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -126,8 +175,7 @@
 
 <!--HEADER-->
 <header class="pb-3" style="background: linear-gradient(to right, #c9184a, #ff8fa3, #ff8fa3); padding: 25px;" name="ver_contenido" id="ver_contenido">
-  <span class="display-1 fw-bold" style="color:  #fff ;">Colaboraciones</span>
-</header>
+  <span class="display-1 fw-bold" style="color:  #fff ;">Colaboraciones</header>
 <!--FIN HEADER-->
 
 <!-- Sección de videos -->
